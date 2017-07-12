@@ -4,7 +4,7 @@ The Incoming API is the gateway that handles all the incoming requests to Empowe
 
 ## Group
 
-### Get Group Incoming API 
+### Get Group Incoming API
 
 Retrieves Group information for the specified Group number. If the service is unable to retrieve Group information, it will return a response with 400 status code and the response will also contain the appropriate errorCode and error message.
 
@@ -139,11 +139,18 @@ Request payload body :
 
 ### Get Carriers Incoming API
 
-Retrieves a list of unique Carriers for a given Group number. If the service is unable to retrieve the list of unique Carriers, it will return a response with 400 status code and the response will also contain the appropriate errorCode and error message.
+* Retrieves a list of unique Carriers for a given Group number. If the service is unable to retrieve the list of unique Carriers, it will return a response with 400 status code and the response will also contain the appropriate errorCode and error message.
 
 Request url :
 ```
 /api/groups/{groupNumber}/carriers/unique
+
+```
+* Retrieves a list of Carriers given a specific Reference Date. If the service is unable to retrieve the list of Carriers, it will return a response with 400 status code and the response will also contain the appropriate errorCode and error message.
+
+Request url :
+```
+/api/groups/{groupNumber}/carriers/{date}
 
 ```
 
